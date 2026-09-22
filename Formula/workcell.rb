@@ -1,25 +1,25 @@
 class Workcell < Formula
   desc "Roboto Studio's software factory CLI: a Linear issue in, a draft pull request with Evidence out"
   homepage "https://github.com/robotostudio/software-factory"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     on_arm do
-      url "https://github.com/robotostudio/software-factory/releases/download/v0.1.1/workcell-darwin-arm64"
-      sha256 "d67eec249a09bfbf9bac5d766ddfc5fd29214d143160980855090aae58997153"
+      url "https://registry.npmjs.org/@robotostudio/workcell-darwin-arm64/-/workcell-darwin-arm64-0.1.2.tgz"
+      sha256 "da88e5173d22e8c067385e94267197a6540e5c6018f90a9139dd0da0628cec02"
     end
     on_intel do
-      url "https://github.com/robotostudio/software-factory/releases/download/v0.1.1/workcell-darwin-x64"
-      sha256 "a8065df9209588c23fee1906e3802e3ba198f3f4a342d684b93d6be14cc4e046"
+      url "https://registry.npmjs.org/@robotostudio/workcell-darwin-x64/-/workcell-darwin-x64-0.1.2.tgz"
+      sha256 "745fbbff50eec66610c1ac76ac3fae5df0f0b0e3be21362de59da167295b6acd"
     end
   end
   on_linux do
-    url "https://github.com/robotostudio/software-factory/releases/download/v0.1.1/workcell-linux-x64"
-    sha256 "134d828daf566c3c664d2aac1c12d7b14deef539bd52b7091a521896cd46317b"
+    url "https://registry.npmjs.org/@robotostudio/workcell-linux-x64/-/workcell-linux-x64-0.1.2.tgz"
+    sha256 "e575d36f651700e38697e7de183fecad4bc7694c8e47e82a9ffddc69bdf19983"
   end
 
   def install
-    bin.install Dir["workcell-*"].first => "workcell"
+    bin.install "bin/workcell"
   end
 
   test do
